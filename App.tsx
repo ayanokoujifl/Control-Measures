@@ -1,20 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StatusBar } from "expo-status-bar"
+import { Text, View } from "react-native"
+import { LinearGradient } from "expo-linear-gradient"
+import { Routes } from "./src/routes/Routes"
+import { SafeAreaView } from "react-native-safe-area-context"
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <LinearGradient
+      colors={["rgba(99,0,89,1)", "rgba(136,7,124,1)", "rgba(255,0,231,1)"]}
+      locations={[0, 0.46, 1]}
+      style={{ flex: 1 }}
+    >
+      <StatusBar translucent style="light" />
+      <Routes />
+    </LinearGradient>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
